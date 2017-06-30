@@ -55,15 +55,53 @@
 #print("my name is %s and my age is %s and my rating are %s")%(var_k,var_l,var_n)
 
 
+<<<<<<< HEAD
 from demo import start_chat# import start_chat
+=======
+
+
+
+def start_chat(spy_name,spy_age,spy_rating):       #start_chat function define
+   menu=("what do you want to do \n 1.add a status update \n 2.add a friend \n 3.select a friend \n 4.send a message \n 5.read a message \n")
+   menu_choice=int(raw_input(menu))                 #take input from user
+
+   if(menu_choice)==1:                   #if-elif condition are apply
+       from new import add_status          #from new file import the add_status function
+       add_status(current_status_message)    #calling add_status function
+
+   elif(menu_choice)==2:
+       from drc_frd import add_friend        #from drc_frd file import the add_friend function
+       add_friend()                          #calling the add_friend function
+
+   elif(menu_choice)==3:
+       from drc_frd import select_friend
+       select_friend()                            #calling the select_friend function
+   elif(menu_choice)==4:
+       from drc_frd import send_message
+       send_message()                                 #calling the send_message function
+   elif(menu_choice)==5:
+       from drc_frd import read_message
+       read_message()                                    #calling the read_message function
+
+   else:
+        print("try again later")
+current_status_message = None
+#start_chat function end
+
+>>>>>>> e323f79c6eb3330750d7a38ebea898d1b97ec322
 
 print("welcome to spychat application")
 temp=("do you want to continue as"+" "+"(Y\N):")
 temp_choice=str(raw_input(temp))
 
 if (temp_choice).upper()=="Y":          #if-elif condition are apply
+<<<<<<< HEAD
     from helper import detail        # values are import from another file i.e helper
     start_chat()                   #start_chat function call
+=======
+    from helper import name, age, rating  # values are import from another file i.e helper
+    start_chat(name,age,rating)        #start_chat function call
+>>>>>>> e323f79c6eb3330750d7a38ebea898d1b97ec322
 
 elif (temp_choice).upper()=="N":
         spy_age=0                #intilaising the variable
@@ -99,7 +137,11 @@ elif (temp_choice).upper()=="N":
                    print("you can use someone in office")
                  spy_is_online=True
                  print("authantication is complete.welcome %s age %s rating %s proud to have on board")%(spy_name,spy_age,spy_rating)
+<<<<<<< HEAD
                  start_chat()                    #calling the start start_chat function
+=======
+                 start_chat(spy_name, spy_age, spy_rating)                    #calling the start start_chat function
+>>>>>>> e323f79c6eb3330750d7a38ebea898d1b97ec322
 
               else:
                   print("it is not valid")
